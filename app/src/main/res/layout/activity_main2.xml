@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#5fabf1"
+        android:elevation="4dp"
+        app:title="Twitter Tag Search"
+        app:titleTextColor="#ffffff"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageButton
+        android:id="@+id/web"
+        android:contentDescription="@string/web_page"
+        android:src="@drawable/twitter_48"
+        android:background="@null"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        app:layout_constraintRight_toLeftOf="@id/logout"
+        android:scaleType="fitCenter"
+        android:padding="15dp"
+        android:elevation="4dp"
+        />
+
+    <ImageButton
+        android:id="@+id/logout"
+        android:contentDescription="@string/log_out"
+        android:src="@drawable/logout_48"
+        android:background="@null"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:elevation="4dp"
+        android:scaleType="fitCenter"
+        android:padding="15dp"
+        />
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+    </SearchView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Empty search"
+        android:gravity="center"
+        android:padding="50dp"
+        android:textSize="20sp">
+    </TextView>
+
+</android.support.constraint.ConstraintLayout>

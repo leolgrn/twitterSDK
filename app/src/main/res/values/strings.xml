@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">twitterSDKProject</string>
+    <string name="web">WEB</string>
+    <string name="logout">LOGOUT</string>
+    <string name="log_out">Log Out</string>
+    <string name="web_page">web page</string>
+</resources>
